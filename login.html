@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Web Page </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="images/logo.png"></a>
+      <div class="nav-links" id="nav-links">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="cousre.html">COURSE</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-box">
+      <h1>World's Biggest University</h1>
+      <p>ASSKHFUKB JBFUB CMJGUKAJB CGUKAM NBKUBV NX UBN UGSKDFJBKUSH MSAHGCABM<br> CUAGSIUKJC  KJGGAB CJKAOINKZBCKUAG JHASKCA C SJGJSM CMJC 
+      </p>
+      <a href="" class="hero-btn">visit us to know more</a>
+    </div>
+
+    
+  </section>
+
+  <div class="wrapper">
+    <div class="title-text">
+       <div class="title login">
+          Login Form
+       </div>
+       <div class="title signup">
+          Signup Form
+       </div>
+    </div>
+    <div class="form-container">
+       <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked>
+          <input type="radio" name="slide" id="signup">
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab"></div>
+       </div>
+       <div class="form-inner">
+          <form action="#" class="login">
+             <div class="field">
+                <input type="text" placeholder="Email Address" required>
+             </div>
+             <div class="field">
+                <input type="password" placeholder="Password" required>
+             </div>
+             <div class="pass-link">
+                <a href="#">Forgot password?</a>
+             </div>
+             <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Login">
+             </div>
+             <div class="signup-link">
+                Not a member? <a href="">Signup now</a>
+             </div>
+          </form>
+          <form action="#" class="signup">
+             <div class="field">
+                <input type="text" placeholder="Email Address" required>
+             </div>
+             <div class="field">
+                <input type="password" placeholder="Password" required>
+             </div>
+             <div class="field">
+                <input type="password" placeholder="Confirm password" required>
+             </div>
+             <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Signup">
+             </div>
+          </form>
+       </div>
+    </div>
+ </div>
+  
+ <script>
+  const loginText = document.querySelector(".title-text .login");
+  const loginForm = document.querySelector("form.login");
+  const loginBtn = document.querySelector("label.login");
+  const signupBtn = document.querySelector("label.signup");
+  const signupLink = document.querySelector("form .signup-link a");
+  signupBtn.onclick = (()=>{
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+  });
+  loginBtn.onclick = (()=>{
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+  });
+  signupLink.onclick = (()=>{
+    signupBtn.click();
+    return false;
+  });
+</script>
+
+  
+</body>
+</html>
